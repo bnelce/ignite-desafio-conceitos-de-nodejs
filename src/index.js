@@ -61,6 +61,7 @@ app.post('/todos', checksExistsUserAccount, (request, response) => {
     deadline: new Date(deadline), 
     created_at: new Date() 
   };
+  
 
   user.todos.push(todo);
   return response.status(201).json(todo);
